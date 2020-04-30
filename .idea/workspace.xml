@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="125736a5-20ad-4938-9528-f5928fc27521" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/learningfever/jdbclessons/beersapp/jdbcFacade/JdbcFacade.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mainInfo.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/be/learningfever/jdbclessons/beersapp/jdbcFacade/JdbcFacadeTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/mainInfo.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/learningfever/jdbclessons/beersapp/BeerApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/learningfever/jdbclessons/beersapp/BeerApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/be/learningfever/jdbclessons/beersapp/BeerAppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/be/learningfever/jdbclessons/beersapp/BeerAppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/learningfever/jdbclessons/beersapp/jdbcFacade/JdbcFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/learningfever/jdbclessons/beersapp/jdbcFacade/JdbcFacade.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,8 +35,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -69,13 +69,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="be.learningfever.jdbclessons.beersapp.jdbcFacade" />
       <recent name="be.learningfever.jdbclessons.beersapp" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.BeerApp">
+  <component name="RunManager" selected="JUnit.JdbcFacadeTest">
     <configuration name="BeerApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="be.learningfever.jdbclessons.beersapp.BeerApp" />
       <module name="jdbclessons" />
@@ -133,8 +134,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="JdbcFacadeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jdbclessons" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="be.learningfever.jdbclessons.beersapp.jdbcFacade.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="be.learningfever.jdbclessons.beersapp.jdbcFacade" />
+      <option name="MAIN_CLASS_NAME" value="be.learningfever.jdbclessons.beersapp.jdbcFacade.JdbcFacadeTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.JdbcFacadeTest" />
         <item itemvalue="Application.BeerApp" />
         <item itemvalue="JUnit.BeerAppTest" />
         <item itemvalue="JUnit.BeerAppTest.basicTest" />
@@ -169,7 +186,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1588157096874</updated>
-      <workItem from="1588157098450" duration="10920000" />
+      <workItem from="1588157098450" duration="11735000" />
     </task>
     <servers />
   </component>
@@ -185,29 +202,29 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="653" y="253" key="#com.intellij.ide.util.MemberChooser/1680.-654.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1588255102261" />
-    <state width="1638" height="280" key="GridCell.Tab.0.bottom" timestamp="1588256482982">
+    <state width="1638" height="280" key="GridCell.Tab.0.bottom" timestamp="1588257390500">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1638" height="280" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1588180678168" />
-    <state width="1638" height="280" key="GridCell.Tab.0.bottom/1680.-654.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1588256482982" />
-    <state width="1638" height="280" key="GridCell.Tab.0.center" timestamp="1588256482981">
+    <state width="1638" height="280" key="GridCell.Tab.0.bottom/1680.-654.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1588257390499" />
+    <state width="1638" height="280" key="GridCell.Tab.0.center" timestamp="1588257390498">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1638" height="280" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1588180678167" />
-    <state width="1638" height="280" key="GridCell.Tab.0.center/1680.-654.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1588256482981" />
-    <state width="1638" height="280" key="GridCell.Tab.0.left" timestamp="1588256482980">
+    <state width="1638" height="280" key="GridCell.Tab.0.center/1680.-654.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1588257390498" />
+    <state width="1638" height="280" key="GridCell.Tab.0.left" timestamp="1588257390498">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1638" height="280" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1588180678166" />
-    <state width="1638" height="280" key="GridCell.Tab.0.left/1680.-654.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1588256482980" />
-    <state width="1638" height="280" key="GridCell.Tab.0.right" timestamp="1588256482981">
+    <state width="1638" height="280" key="GridCell.Tab.0.left/1680.-654.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1588257390498" />
+    <state width="1638" height="280" key="GridCell.Tab.0.right" timestamp="1588257390499">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1638" height="280" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1588180678168" />
-    <state width="1638" height="280" key="GridCell.Tab.0.right/1680.-654.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1588256482981" />
-    <state x="562" y="286" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1588248307830">
+    <state width="1638" height="280" key="GridCell.Tab.0.right/1680.-654.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1588257390499" />
+    <state x="562" y="286" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1588256890320">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="562" y="286" key="com.intellij.testIntegration.createTest.CreateTestDialog/1680.-654.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1588248307830" />
+    <state x="562" y="286" key="com.intellij.testIntegration.createTest.CreateTestDialog/1680.-654.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1588256890320" />
   </component>
 </project>

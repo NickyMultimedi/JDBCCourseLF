@@ -12,17 +12,22 @@ public class JdbcFacade implements AutoCloseable {
     public static final int TYPE_SCROLL_SYNCED = ResultSet.TYPE_SCROLL_SENSITIVE;
     public static final int CONCUR_READ_ONLY = ResultSet.CONCUR_READ_ONLY;
     public static final int CONCUR_UPDATEABLE = ResultSet.CONCUR_UPDATABLE;
+    public static final String PROPERTIES_PATH = "src/main/resources/mainInfo.properties";
 
     private Properties properties;
     private Connection connection;
 
     public JdbcFacade() {
-        readProperties();
+        readProperties(PROPERTIES_PATH);
         createConnection();
     }
 
-    private void readProperties() {
-        try (FileInputStream in = new FileInputStream("src/main/resources/mainInfo.properties")) {
+    public JdbcFacade(String propertiesPath) {
+        readProperties(propertiesPath);
+    }
+
+    private void readProperties(String propertiesPath) {
+        try (FileInputStream in = new FileInputStream(propertiesPath)) {
 
             properties = new Properties();
             properties.load(in);
