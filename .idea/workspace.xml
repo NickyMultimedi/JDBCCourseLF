@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="125736a5-20ad-4938-9528-f5928fc27521" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/be/learningfever/jdbclessons/beersapp/BeerAppTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/data.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/schema.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/be/learningfever/jdbclessons/beersapp/jdbcFacade/JdbcFacade.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mainInfo.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/learningfever/jdbclessons/beersapp/BeerApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/learningfever/jdbclessons/beersapp/BeerApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/be/learningfever/jdbclessons/FirstConnection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/be/learningfever/jdbclessons/beersapp/BeerAppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/be/learningfever/jdbclessons/beersapp/BeerAppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,8 +35,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -77,7 +75,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BeerAppTest">
+  <component name="RunManager" selected="Application.BeerApp">
     <configuration name="BeerApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="be.learningfever.jdbclessons.beersapp.BeerApp" />
       <module name="jdbclessons" />
@@ -137,8 +135,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BeerAppTest" />
         <item itemvalue="Application.BeerApp" />
+        <item itemvalue="JUnit.BeerAppTest" />
         <item itemvalue="JUnit.BeerAppTest.basicTest" />
         <item itemvalue="Application.FirstConnection" />
       </list>
@@ -171,7 +169,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1588157096874</updated>
-      <workItem from="1588157098450" duration="7522000" />
+      <workItem from="1588157098450" duration="10920000" />
     </task>
     <servers />
   </component>
@@ -183,26 +181,30 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="375" y="299" key="#com.intellij.execution.impl.EditConfigurationsDialog/1680.-654.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1588241118992" />
-    <state width="1638" height="280" key="GridCell.Tab.0.bottom" timestamp="1588249273391">
+    <state x="653" y="253" key="#com.intellij.ide.util.MemberChooser" timestamp="1588255102261">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="653" y="253" key="#com.intellij.ide.util.MemberChooser/1680.-654.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1588255102261" />
+    <state width="1638" height="280" key="GridCell.Tab.0.bottom" timestamp="1588256482982">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1638" height="280" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1588180678168" />
-    <state width="1638" height="280" key="GridCell.Tab.0.bottom/1680.-654.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1588249273391" />
-    <state width="1638" height="280" key="GridCell.Tab.0.center" timestamp="1588249273391">
+    <state width="1638" height="280" key="GridCell.Tab.0.bottom/1680.-654.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1588256482982" />
+    <state width="1638" height="280" key="GridCell.Tab.0.center" timestamp="1588256482981">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1638" height="280" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1588180678167" />
-    <state width="1638" height="280" key="GridCell.Tab.0.center/1680.-654.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1588249273391" />
-    <state width="1638" height="280" key="GridCell.Tab.0.left" timestamp="1588249273390">
+    <state width="1638" height="280" key="GridCell.Tab.0.center/1680.-654.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1588256482981" />
+    <state width="1638" height="280" key="GridCell.Tab.0.left" timestamp="1588256482980">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1638" height="280" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1588180678166" />
-    <state width="1638" height="280" key="GridCell.Tab.0.left/1680.-654.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1588249273390" />
-    <state width="1638" height="280" key="GridCell.Tab.0.right" timestamp="1588249273391">
+    <state width="1638" height="280" key="GridCell.Tab.0.left/1680.-654.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1588256482980" />
+    <state width="1638" height="280" key="GridCell.Tab.0.right" timestamp="1588256482981">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1638" height="280" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1588180678168" />
-    <state width="1638" height="280" key="GridCell.Tab.0.right/1680.-654.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1588249273391" />
+    <state width="1638" height="280" key="GridCell.Tab.0.right/1680.-654.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1588256482981" />
     <state x="562" y="286" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1588248307830">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>

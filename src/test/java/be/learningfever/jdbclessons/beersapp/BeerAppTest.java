@@ -33,30 +33,4 @@ class BeerAppTest {
         }
     }
 
-    @Test
-    void basisTest() throws SQLException {
-        Connection connect = DriverManager.getConnection(
-                "jdbc:hsqldb:mem:mymemdb",
-                "sa",
-                ""
-        );
-
-        String testWaarde = BeerApp.showBeerWithId(connect, 1);
-        String expectedValue = "TestBeer";
-        assertEquals(expectedValue, testWaarde);
-    }
-
-    @Test
-    void TestIfBeerIdDoesntExist() throws SQLException {
-        Connection connect = DriverManager.getConnection(
-                "jdbc:hsqldb:mem:mymemdb",
-                "sa",
-                ""
-        );
-
-        String testWaarde = BeerApp.showBeerWithId(connect, 100);
-        String expectedValue = "FOUTMELDING: Geen resultaten";
-        assertEquals(expectedValue, testWaarde);
-    }
-
 }
