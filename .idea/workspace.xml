@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="125736a5-20ad-4938-9528-f5928fc27521" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/learningfever/jdbclessons/beersapp/BeerApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/be/learningfever/jdbclessons/beersapp/BeerAppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/data.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/schema.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/be/learningfever/jdbclessons/FirstConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/be/learningfever/jdbclessons/FirstConnection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/learningfever/jdbclessons/beersapp/BeerApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/learningfever/jdbclessons/beersapp/BeerApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/be/learningfever/jdbclessons/FirstConnection.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +38,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -62,10 +64,20 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
-  <component name="RunManager" selected="Application.BeerApp">
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="be.learningfever.jdbclessons.beersapp" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.BeerAppTest">
     <configuration name="BeerApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="be.learningfever.jdbclessons.beersapp.BeerApp" />
       <module name="jdbclessons" />
@@ -92,9 +104,42 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="BeerAppTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jdbclessons" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="be.learningfever.jdbclessons.beersapp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="be.learningfever.jdbclessons.beersapp" />
+      <option name="MAIN_CLASS_NAME" value="be.learningfever.jdbclessons.beersapp.BeerAppTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BeerAppTest.basicTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jdbclessons" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="be.learningfever.jdbclessons.beersapp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="be.learningfever.jdbclessons.beersapp" />
+      <option name="MAIN_CLASS_NAME" value="be.learningfever.jdbclessons.beersapp.BeerAppTest" />
+      <option name="METHOD_NAME" value="basicTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BeerAppTest" />
         <item itemvalue="Application.BeerApp" />
+        <item itemvalue="JUnit.BeerAppTest.basicTest" />
         <item itemvalue="Application.FirstConnection" />
       </list>
     </recent_temporary>
@@ -126,7 +171,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1588157096874</updated>
-      <workItem from="1588157098450" duration="2632000" />
+      <workItem from="1588157098450" duration="7522000" />
     </task>
     <servers />
   </component>
@@ -138,25 +183,29 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="375" y="299" key="#com.intellij.execution.impl.EditConfigurationsDialog/1680.-654.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1588241118992" />
-    <state width="1638" height="280" key="GridCell.Tab.0.bottom" timestamp="1588241167337">
+    <state width="1638" height="280" key="GridCell.Tab.0.bottom" timestamp="1588249273391">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1638" height="280" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1588180678168" />
-    <state width="1638" height="280" key="GridCell.Tab.0.bottom/1680.-654.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1588241167337" />
-    <state width="1638" height="280" key="GridCell.Tab.0.center" timestamp="1588241167336">
+    <state width="1638" height="280" key="GridCell.Tab.0.bottom/1680.-654.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1588249273391" />
+    <state width="1638" height="280" key="GridCell.Tab.0.center" timestamp="1588249273391">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1638" height="280" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1588180678167" />
-    <state width="1638" height="280" key="GridCell.Tab.0.center/1680.-654.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1588241167336" />
-    <state width="1638" height="280" key="GridCell.Tab.0.left" timestamp="1588241167335">
+    <state width="1638" height="280" key="GridCell.Tab.0.center/1680.-654.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1588249273391" />
+    <state width="1638" height="280" key="GridCell.Tab.0.left" timestamp="1588249273390">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1638" height="280" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1588180678166" />
-    <state width="1638" height="280" key="GridCell.Tab.0.left/1680.-654.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1588241167335" />
-    <state width="1638" height="280" key="GridCell.Tab.0.right" timestamp="1588241167336">
+    <state width="1638" height="280" key="GridCell.Tab.0.left/1680.-654.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1588249273390" />
+    <state width="1638" height="280" key="GridCell.Tab.0.right" timestamp="1588249273391">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1638" height="280" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1588180678168" />
-    <state width="1638" height="280" key="GridCell.Tab.0.right/1680.-654.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1588241167336" />
+    <state width="1638" height="280" key="GridCell.Tab.0.right/1680.-654.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1588249273391" />
+    <state x="562" y="286" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1588248307830">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="562" y="286" key="com.intellij.testIntegration.createTest.CreateTestDialog/1680.-654.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1588248307830" />
   </component>
 </project>

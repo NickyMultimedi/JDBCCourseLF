@@ -1,9 +1,6 @@
 package be.learningfever.jdbclessons.beersapp;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
 
 public class BeerApp {
     private static final String URL ="jdbc:mariadb://javadev-training.be/javadevt_Lf001";
@@ -14,7 +11,17 @@ public class BeerApp {
 
         //showBeers();
         //showBeersOrderedByAlcohol();
-        showBeersWithAlcohol(15);
+        //showBeersWithAlcohol(15);
+
+        try (
+                Connection connect = DriverManager.getConnection(URL, USER, PSW);
+                ) {
+
+            System.out.println(showBeerWithId(connect, 4));
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public static void showBeers() {
@@ -85,6 +92,20 @@ public class BeerApp {
             System.out.println("Oeps, sometehing went wrong");
             e.printStackTrace();
         }
+    }
+
+    public static String showBeerWithId(Connection connect, int id) throws SQLException {
+        String sql = "select * from Beers where Id = " + id + ";";
+
+        Statement statement = connect.createStatement();
+
+        ResultSet result = statement.executeQuery(sql);
+
+        while(result.next()) {
+            return result.getString("Name");
+        }
+
+        return "FOUTMELDING: Geen resultaten";
     }
 
 }
