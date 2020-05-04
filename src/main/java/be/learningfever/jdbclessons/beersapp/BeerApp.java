@@ -12,20 +12,6 @@ public class BeerApp {
 
     public static void main(String[] args) {
 
-        try (
-                JdbcFacade helper = new JdbcFacade();
-                ) {
-
-            ResultSet result = helper.executeQuery("select * from Beers where Id = 4");
-
-            while (result.next()) {
-                System.out.println(result.getString("Name"));
-            }
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
     }
 
 }

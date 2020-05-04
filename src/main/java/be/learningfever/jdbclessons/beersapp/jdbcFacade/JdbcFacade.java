@@ -169,4 +169,37 @@ public class JdbcFacade implements AutoCloseable {
             throw new RuntimeException(sqle);
         }
     }
+
+    public void startTransaction() {
+        try {
+            getConnection().setAutoCommit(false);
+        } catch (SQLException sqle) {
+            sqle.printStackTrace();
+        }
+    }
+
+    public void stopTransaction() {
+        try {
+            getConnection().commit();
+            getConnection().setAutoCommit(true);
+        } catch (SQLException sqle) {
+            rollback();
+        }
+    }
+
+    public void rollback() {
+        try {
+            getConnection().rollback();
+        } catch (SQLException sqle) {
+            sqle.printStackTrace();
+        }
+    }
+
+    public void commitTransaction() {
+        try {
+            getConnection().commit();
+        } catch (SQLException sqle) {
+            rollback();
+        }
+    }
 }
