@@ -1,9 +1,9 @@
 package be.learningfever.jdbclessons.beersapp.jdbcFacade;
 
-import javax.security.auth.login.CredentialException;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.Properties;
 
 public class JdbcFacade implements AutoCloseable {
@@ -16,14 +16,16 @@ public class JdbcFacade implements AutoCloseable {
 
     private Properties properties;
     private Connection connection;
+    private ArrayList<Statement> statements = new ArrayList<>();
+    private ArrayList<ResultSet> results = new ArrayList<>();
 
     public JdbcFacade() {
-        readProperties(PROPERTIES_PATH);
-        createConnection();
+        this(PROPERTIES_PATH);
     }
 
     public JdbcFacade(String propertiesPath) {
         readProperties(propertiesPath);
+        createConnection();
     }
 
     private void readProperties(String propertiesPath) {
@@ -52,10 +54,18 @@ public class JdbcFacade implements AutoCloseable {
 
     @Override
     public void close() throws Exception {
+        for (ResultSet result : results) {
+            result.close();
+        }
+
+        for (Statement state : statements) {
+            state.close();
+        }
+
         connection.close();
     }
 
-    public Properties getProperties() {
+    Properties getProperties() {
         return properties;
     }
 
@@ -85,7 +95,9 @@ public class JdbcFacade implements AutoCloseable {
 
     public Statement getStatement() {
         try {
-            return connection.createStatement();
+            Statement statement = connection.createStatement();
+            statements.add(statement);
+            return statement;
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
@@ -93,7 +105,9 @@ public class JdbcFacade implements AutoCloseable {
 
     public Statement getStatement(int restultSetType, int resultSetConcurent) {
         try {
-            return connection.createStatement(restultSetType, resultSetConcurent);
+            Statement statement = connection.createStatement(restultSetType, resultSetConcurent);
+            statements.add(statement);
+            return statement;
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
@@ -102,7 +116,10 @@ public class JdbcFacade implements AutoCloseable {
     public ResultSet executeQuery(String sql) {
         try {
 
-            return getStatement().executeQuery(sql);
+            ResultSet result = getStatement().executeQuery(sql);
+            results.add(result);
+
+            return result;
 
         } catch (SQLException sqle) {
             throw new RuntimeException(sqle);
@@ -112,7 +129,10 @@ public class JdbcFacade implements AutoCloseable {
     public ResultSet executeQueryNavigable(String sql) {
         try {
 
-            return getStatement(TYPE_SCROLL, CONCUR_READ_ONLY).executeQuery(sql);
+            ResultSet result = getStatement(TYPE_SCROLL, CONCUR_READ_ONLY).executeQuery(sql);
+            results.add(result);
+
+            return result;
 
         } catch (SQLException sqle) {
             throw new RuntimeException(sqle);
@@ -122,8 +142,29 @@ public class JdbcFacade implements AutoCloseable {
     public ResultSet executeQueryNavigableUpdatable(String sql) {
         try {
 
-            return getStatement(TYPE_SCROLL, CONCUR_UPDATEABLE).executeQuery(sql);
+            ResultSet result = getStatement(TYPE_SCROLL, CONCUR_UPDATEABLE).executeQuery(sql);
+            results.add(result);
 
+            return result;
+
+        } catch (SQLException sqle) {
+            throw new RuntimeException(sqle);
+        }
+    }
+
+    public int executeUpdate(String sql) {
+        try {
+            return getStatement().executeUpdate(sql);
+        } catch (SQLException sqle) {
+            throw new RuntimeException(sqle);
+        }
+    }
+
+    public PreparedStatement prepareStatement(String sql) {
+        try {
+            PreparedStatement statement = connection.prepareStatement(sql);
+            statements.add(statement);
+            return statement;
         } catch (SQLException sqle) {
             throw new RuntimeException(sqle);
         }
